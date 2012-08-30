@@ -90,7 +90,10 @@
 
           <div id="eclipse-instructions" class="instructions tab-pane active">
             <a name="using-eclipse"></a>
-             <span class="alert alert-warn">If you already created this app from the Heroku Eclipse Plugin, skip to <a href="#step3">Step 3</a>.</span>
+             <div class="alert alert-warn">If you already created this app from the Heroku Eclipse Plugin, proceed to <a href="#step3">Step 3</a>.
+             The following steps depends on the Heroku-Eclipse plugin. If you do not have the Heroku Eclipse plugin installed, 
+             follow the <a href="#">step-by-step guide</a> on DevCenter to install the plugin in Eclipse.
+             </div>
 
             <h2>Step 1.Configure Heroku Eclipse preferences</h2>
             <ol>
