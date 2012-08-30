@@ -90,21 +90,10 @@
 
           <div id="eclipse-instructions" class="instructions tab-pane active">
             <a name="using-eclipse"></a>
-            <h1>Using Eclipse 3.7:</h1>
+             <span class="alert alert-warn">If you already created this app from the Heroku Eclipse Plugin, skip to <a href="#step3">Step 3</a>.</span>
 
-              <em>If you already created this app from the Heroku Eclipse Plugin, skip to Step 3.</em>
-
-            <h2>Step 1. Setup your environment</h2>
+            <h2>Step 1.Configure Heroku Eclipse preferences</h2>
             <ol>
-              <li>Ensure the following Eclipse plugins are installed:
-                <ol>
-                  <li><a href="http://unicase.blogspot.com/2011/01/egit-tutorial-for-beginners.html">EGit</a></li>
-                  <li><a href="http://www.eclipse.org/m2e/">Maven Eclipse Plugin</a></li>
-                  <li><a href="http://eclipse-plugin.herokuapp.com">Heroku Eclipse Plugin</a></li>
-                </ol>
-              </li>
-              <li>Configure access to Heroku:
-                <ol>
                   <li>Open <code>Eclipse</code><i class="icon-chevron-right"></i><code>Preferences</code></li>
                   <li>Select <code>Heroku</code></li>
                   <li>Enter your <code>Email</code> and <code>Password</code></li>
@@ -147,8 +136,6 @@
                         </a>
 	                    </span>
                   </li>
-                </ol>
-              </li>
             </ol>
 
             <h2>Step 2. Importing this App</h2>
@@ -224,7 +211,7 @@
 	                    </span>
               </li>
             </ol>
-
+		    <a name="step3" id="step3"></a>
             <h2>Step 3. Makes some changes to the app</h2>
             <ol>
               <li>Open <code>PersonServiceImpl.java</code></li>
