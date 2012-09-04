@@ -91,9 +91,10 @@
           <div id="eclipse-instructions" class="instructions tab-pane active">
             <a name="using-eclipse"></a>
              <div class="alert alert-warn">If you already created this app from the Heroku Eclipse Plugin, proceed to <a href="#step3">Step 3</a>.
-             The following steps depends on the Heroku-Eclipse plugin. If you do not have the Heroku Eclipse plugin installed & configured, 
+             The following steps depends on the Heroku Eclipse plugin. If you do not have the Heroku Eclipse plugin installed and configured,
              follow a <a href="https://devcenter.heroku.com/articles/getting-started-with-heroku-eclipse#installation-and-setup" target="_blank">step-by-step guide</a> 
-             on DevCenter to install the plugin & configure the plugin in Eclipse.
+             on Dev Center to install the plugin and
+               configure the plugin in Eclipse.
              </div>
 
             <h2>Step 1.Configure Heroku Eclipse preferences</h2>
@@ -233,7 +234,7 @@ c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
               <li>Enter a commit message and click <code>Commit</code>
                 <div class="modal hide" id="commitChanges">
                   <div class="modal-header">
-                    <a class="close" data-dismiss="modal">×</a>
+                    <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
                     <h3>Commit Changes</h3>
                   </div>
                   <div class="modal-body">
@@ -251,7 +252,7 @@ c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
               <li>Review the push results. At the bottom, a "... deployed to Heroku" message will appear.
                 <div class="modal hide" id="pushResults">
                   <div class="modal-header">
-                    <a class="close" data-dismiss="modal">×</a>
+                    <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
                     <h3>Push Results</h3>
                   </div>
                   <div class="modal-body">
