@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.example.model.Person;
 import com.example.service.PersonService;
 
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -23,8 +24,9 @@ public class PersonController {
     public String listPeople(Map<String, Object> map) {
 
         map.put("person", new Person());
-        map.put("peopleList", personService.listPeople());
-
+        List<Person> personList = personService.listPeople();
+        map.put("peopleList", personList);
+        System.out.println(" PeopleList.size()="+personList.size());
         return "people";
     }
 
