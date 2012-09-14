@@ -24,9 +24,7 @@ public class PersonController {
     public String listPeople(Map<String, Object> map) {
 
         map.put("person", new Person());
-        List<Person> personList = personService.listPeople();
-        map.put("peopleList", personList);
-        System.out.println(" PeopleList.size()="+personList.size());
+        map.put("peopleList", personService.listPeople());
         return "people";
     }
 
