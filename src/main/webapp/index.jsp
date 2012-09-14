@@ -198,7 +198,7 @@
                         </a>
 	                    </span>
               </li>
-              <li>Click <code>Finish</code> to complete the import. The plugin will use <a href="#">eGit</a> and clone the source code repository to a local Git repository.
+              <li>Click <code>Finish</code> to complete the import. The plugin will use <a href="http://www.eclipse.org/egit/">eGit</a> and clone the source code repository to a local Git repository.
                 <div class="modal hide" id="importApp4">
                   <div class="modal-header">
                     <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
