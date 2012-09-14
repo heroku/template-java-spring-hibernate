@@ -61,7 +61,7 @@
         <dependency>
             <groupId>com.github.jsimone</groupId>
             <artifactId>webapp-runner</artifactId>
-            <version>7.0.22.3</version>
+            <version>7.0.27.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -94,7 +94,7 @@
                                 <artifactItem>
                                     <groupId>com.github.jsimone</groupId>
                                     <artifactId>webapp-runner</artifactId>
-                                    <version>7.0.22.3</version>
+                                    <version>7.0.27.1</version>
                                     <destFileName>webapp-runner.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
