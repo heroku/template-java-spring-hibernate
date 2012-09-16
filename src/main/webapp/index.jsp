@@ -368,9 +368,7 @@ Uploading SSH public key /Users/Administrator/.ssh/id_rsa.pub
 Authentication successful.</pre>
 
   <h2>Step 3. Clone the App</h2>
-  <code>git clone -o heroku git@heroku.com:
-    <script>document.write(appname())</script>
-    .git</code>
+  <code>git clone -o heroku git@heroku.com:<script>document.write(appname())</script>.git</code>
 
   <h2>Step 4. Makes some changes to the app</h2>
   <ol>
