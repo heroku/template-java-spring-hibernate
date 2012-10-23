@@ -1,4 +1,4 @@
-# Spring MVC and Hibernate template application
+# Groovy, Spring MVC and Hibernate sample application
 
 This is a template for a web application that uses Spring MVC and Hibernate. The sample code is a simple CRUD page that manipulates records for a single model object.
 
