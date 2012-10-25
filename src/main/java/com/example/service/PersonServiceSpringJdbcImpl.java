@@ -30,7 +30,7 @@ public class PersonServiceSpringJdbcImpl extends JdbcDaoSupport implements Perso
     @Override
     public List<Person> listPeople() {
         return getJdbcTemplate().query(
-                "select * from person",
+                "SELECT * FROM PERSON",
                 new RowMapper<Person>() {
                     public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
                         Person person = new Person();
