@@ -15,6 +15,7 @@ import com.example.service.PersonService;
 import java.util.Map;
 
 @Controller
+@RequestMapping("/people")
 public class PersonController {
 
     @Qualifier("personServiceImpl")
