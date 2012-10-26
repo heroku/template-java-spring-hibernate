@@ -16,7 +16,7 @@ public class PersonServiceGroovyJdbcImpl implements PersonService {
 
     @Override
     public void addPerson(Person person) {
-        new Sql(dataSource).execute('INSERT INTO PUBLIC.PERSON(FIRSTNAME,LASTNAME) VALUES (?,?)',
+        new Sql(dataSource).execute('INSERT INTO PERSON(FIRSTNAME,LASTNAME) VALUES (?,?)',
                 [person.firstName, person.lastName])
     }
 
@@ -24,7 +24,7 @@ public class PersonServiceGroovyJdbcImpl implements PersonService {
     public List<Person> listPeople() {
         List<Person> people = []
 
-        new Sql(dataSource).eachRow("SELECT * FROM PUBLIC.PERSON") {
+        new Sql(dataSource).eachRow("SELECT * FROM PERSON") {
             people << new Person(id: it.id, firstName: it.firstName, lastName: it.lastName)
         }
 
@@ -33,6 +33,6 @@ public class PersonServiceGroovyJdbcImpl implements PersonService {
 
     @Override
     public void removePerson(Integer id) {
-        new Sql(dataSource).execute("DELETE FROM PUBLIC.PERSON WHERE PERSON.ID=$id");
+        new Sql(dataSource).execute("DELETE FROM PERSON WHERE PERSON.ID=$id");
     }
 }

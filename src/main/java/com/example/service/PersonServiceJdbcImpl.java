@@ -22,7 +22,7 @@ public class PersonServiceJdbcImpl implements PersonService {
         try {
             connection = dataSource.getConnection();
 
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO PUBLIC.PERSON(FIRSTNAME,LASTNAME) VALUES (?,?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO PERSON(FIRSTNAME,LASTNAME) VALUES (?,?)");
             preparedStatement.setString(1, person.getFirstName());
             preparedStatement.setString(2, person.getLastName());
 
@@ -49,7 +49,7 @@ public class PersonServiceJdbcImpl implements PersonService {
             connection = dataSource.getConnection();
             Statement statement = connection.createStatement();
 
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM PUBLIC.PERSON");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM PERSON");
             while (resultSet.next()) {
                 Person person = new Person();
                 person.setId(resultSet.getInt("ID"));
@@ -78,7 +78,7 @@ public class PersonServiceJdbcImpl implements PersonService {
 
         try {
             connection = dataSource.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM PUBLIC.PERSON WHERE PERSON.ID=?");
+            PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM PERSON WHERE PERSON.ID=?");
             preparedStatement.setInt(1, id);
 
             preparedStatement.execute();
