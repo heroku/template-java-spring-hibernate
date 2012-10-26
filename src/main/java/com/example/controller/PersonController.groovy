@@ -12,38 +12,36 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.example.model.Person;
 import com.example.service.PersonService;
 
-import java.util.Map;
-
 @Controller
 @RequestMapping("/people")
-public class PersonController {
+class PersonController {
 
     @Qualifier("personServiceGroovyJdbcImpl")
     @Autowired
-    private PersonService personService;
+    PersonService personService;
 
     @RequestMapping("/")
-    public String listPeople(Map<String, Object> map) {
+    String listPeople(Map<String, Object> map) {
 
-        map.put("person", new Person());
-        map.put("peopleList", personService.listPeople());
+        map.person = new Person()
+        map.peopleList = personService.listPeople()
 
-        return "people";
+        "people"
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addPerson(@ModelAttribute("person") Person person, BindingResult result) {
+    String addPerson(@ModelAttribute("person") Person person, BindingResult result) {
 
-        personService.addPerson(person);
+        personService.addPerson(person)
 
-        return "redirect:/people/";
+        "redirect:/people/"
     }
 
     @RequestMapping("/delete/{personId}")
-    public String deletePerson(@PathVariable("personId") Integer personId) {
+    String deletePerson(@PathVariable("personId") Integer personId) {
 
-        personService.removePerson(personId);
+        personService.removePerson(personId)
 
-        return "redirect:/people/";
+        "redirect:/people/"
     }
 }
