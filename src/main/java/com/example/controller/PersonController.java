@@ -18,7 +18,7 @@ import java.util.Map;
 @RequestMapping("/people")
 public class PersonController {
 
-    @Qualifier("personServiceImpl")
+    @Qualifier("personServiceGroovyJdbcImpl")
     @Autowired
     private PersonService personService;
 
