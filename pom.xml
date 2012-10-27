@@ -75,6 +75,12 @@
             <version>7.0.27.1</version>
             <scope>provided</scope>
         </dependency>
+        <!-- sitemesh3 alpha-->
+        <dependency>
+            <groupId>org.sitemesh</groupId>
+            <artifactId>sitemesh</artifactId>
+            <version>3.0-alpha-1</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -1,0 +1,3 @@
+<sitemesh>
+    <mapping path="/*" decorator="/WEB-INF/layouts/bootstrap_layout.jsp"/>
+</sitemesh>
