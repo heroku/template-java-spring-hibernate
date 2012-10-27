@@ -103,6 +103,11 @@
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>8.1.7.v20120910</version>
+                <configuration>
+                    <scanIntervalSeconds>3</scanIntervalSeconds>
+                    <stopKey>groovy-rocks</stopKey>
+                    <stopPort>8123</stopPort>
+                </configuration>
             </plugin>
 
             <plugin>
