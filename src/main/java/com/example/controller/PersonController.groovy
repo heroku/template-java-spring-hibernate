@@ -76,4 +76,31 @@ class PersonController {
         }
         writer.toString()
     }
+
+    @RequestMapping(value = "/firstNames", method = RequestMethod.GET)
+    @ResponseBody
+    public String getFirstNamesHtml() {
+        StringWriter writer = new StringWriter()
+        def out = new MarkupBuilder(writer)
+
+        out.html {
+            head {
+                title "List of First Names"
+            }
+            body {
+                h1 "List of First Names"
+
+                ul {
+                    personService.listPeople().each { Person p ->
+                        li {
+                            h3 p.firstName
+                        }
+                    }
+
+                }
+            }
+        }
+        writer.toString()
+    }
+
 }
