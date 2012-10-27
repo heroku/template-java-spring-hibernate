@@ -19,7 +19,7 @@ import groovy.xml.MarkupBuilder;
 @RequestMapping("/people")
 class PersonController {
 
-    @Qualifier("personServiceGroovyJdbcImpl")
+    @Qualifier("personServiceImpl")
     @Autowired
     PersonService personService;
 
