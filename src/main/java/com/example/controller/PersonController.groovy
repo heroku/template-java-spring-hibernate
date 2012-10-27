@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.model.Person;
-import com.example.service.PersonService;
+import com.example.service.PersonService
+import org.springframework.web.bind.annotation.ResponseBody
+import groovy.json.JsonBuilder
+import groovy.xml.MarkupBuilder;
 
 @Controller
 @RequestMapping("/people")
@@ -43,5 +46,34 @@ class PersonController {
         personService.removePerson(personId)
 
         "redirect:/people/"
+    }
+
+    @RequestMapping(value = "/status/json", method = RequestMethod.GET, produces="application/json")
+    @ResponseBody
+    public String getJson() {
+        def json = new JsonBuilder()
+        json.status {
+            date new Date()
+            peopleCount personService.listPeople().size()
+        }
+        json.toPrettyString()
+    }
+
+    @RequestMapping(value = "/xml", method = RequestMethod.GET, produces="application/xml")
+    @ResponseBody
+    public String getXml() {
+        StringWriter writer = new StringWriter()
+        def xml = new MarkupBuilder(writer)
+
+        xml.people {
+            personService.listPeople().each { Person p ->
+                person {
+                    id p.id
+                    firstName p.firstName
+                    lastName p.lastName
+                }
+            }
+        }
+        writer.toString()
     }
 }
