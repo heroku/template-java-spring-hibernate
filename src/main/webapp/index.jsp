@@ -8,9 +8,8 @@
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet">
 
   <!--
   IMPORTANT:
@@ -66,7 +65,7 @@
   </script>
 </head>
 
-<body>
+<body onload="prettyPrint();">
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
@@ -273,7 +272,7 @@
   <ol>
     <li>Open <code>PersonServiceImpl.java</code></li>
     <li>Query the people in alphabetical order by replacing line 29 with the following two lines:
-                <pre class="once language-java">
+                <pre class="prettyprint once language-java">
 Root&lt;Person&gt; from = c.from(Person.class);
 c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
                 </pre>
@@ -374,7 +373,7 @@ Authentication successful.</pre>
   <ol>
     <li>Open <code>src/main/java/com/example/PersonServiceImpl.java in your favorite editor</code></li>
     <li>Query the people in alphabetical order by replacing line 29 with the following two lines:
-                <pre class="once language-java">
+                <pre class="prettyprint once language-java">
 Root&lt;Person&gt; from = c.from(Person.class);
 c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
                 </pre>
@@ -408,8 +407,8 @@ c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
 </div>
 
 
-<script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
 </body>
 </html>
